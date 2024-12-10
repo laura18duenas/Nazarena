@@ -1,0 +1,168 @@
+<!-- BREADCRUMB -->
+<%- include("../components/breadcrumb-area", { title: "Acerca de Mí" }) %>
+
+<!-- start: Works Area -->
+<section class="works-section style-2" id="resume-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-header text-center">
+                    <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">Mi Currículum</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="works-wrapper">
+                    <div class="works-content-item">
+                        <h3 class="title wow fadeInRight" data-wow-delay=".3s">Experiencia Laboral</h3>
+                        <div class="works-inner wow fadeInUp" data-wow-delay=".4s">
+                            <% data.work_experience.forEach(job => { %>
+                                <div class="works-item">
+                                    <div class="works-icon">
+                                        <i class="fa-solid fa-briefcase"></i>
+                                    </div>
+                                    <div class="works-content">
+                                        <h5 class="title"><%= job.role %></h5>
+                                        <span class="sub-title"><%= job.company %></span>
+                                        <span class="number mt-2"><%= job.date %></span>
+                                    </div>
+                                </div>
+                            <% }); %>
+                        </div>
+                    </div>
+                    <div class="works-content-item">
+                        <h3 class="title wow fadeInLeft" data-wow-delay=".3s">Educación</h3>
+                        <div class="works-inner wow fadeInUp" data-wow-delay=".4s">
+                            <% data.education.forEach(education => { %>
+                                <div class="works-item">
+                                    <div class="works-icon">
+                                        <i class="fa-solid fa-graduation-cap"></i>
+                                    </div>
+                                    <div class="works-content">
+                                        <h5 class="title"><%= education.role %></h5>
+                                        <span class="sub-title"><%= education.company %></span>
+                                        <span class="number mt-2"><%= education.date %></span>
+                                    </div>
+                                </div>
+                            <% }); %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end: Works Area -->
+
+<!-- start: Skills Area -->
+<section class="skills-section style-3" id="skills-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-header text-center">
+                    <h2 class="section-title wow fadeInUp" data-wow-delay=".3s">Mis Habilidades</h2>
+                    <p class="text-uppercase wow fadeInUp" data-wow-delay=".4s">
+                        Especialidades
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="skills-widget d-flex flex-wrap justify-content-center align-items-center">
+                    <% data.skills.forEach(skill => { %>
+                        <div class="skill-item wow fadeInUp" data-wow-delay=".7s">
+                            <div class="skill-inner">
+                                <div class="icon-box">
+                                    <img src="img/skills/<%= skill.icon %>" alt=""/>
+                                </div>
+                                <div class="number"><%= skill.percentage %></div>
+                            </div>
+                            <p><%= skill.name %></p>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end: Skills Area -->
+
+<!-- start: Counter Area -->
+<section class="counter-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="funfact-area">
+                    <div class="row">
+                        <div class="col-6 col-lg-3">
+                            <div class="d-flex justify-content-center">
+                                <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center wow fadeInUp"
+                                     data-wow-delay=".3s">
+                                    <div class="number"><span class="odometer" data-count="2">0</span></div>
+                                    <div class="text">Años de <br/>Experiencia</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <div class="d-flex justify-content-center">
+                                <div
+                                        class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center wow fadeInUp"
+                                        data-wow-delay=".4s">
+                                    <div class="number"><span class="odometer" data-count="6">0</span></div>
+                                    <div class="text">Proyectos <br/>Completados</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <div class="d-flex justify-content-center">
+                                <div
+                                        class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center wow fadeInUp"
+                                        data-wow-delay=".5s">
+                                    <div class="number"><span class="odometer" data-count="3">0</span></div>
+                                    <div class="text">Empresas <br/>Satisfechas</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-lg-3">
+                            <div class="d-flex justify-content-center">
+                                <div
+                                        class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center wow fadeInUp"
+                                        data-wow-delay=".6s">
+                                    <div class="number"><span class="odometer" data-count="3">0</span></div>
+                                    <div class="text">Proyectos <br/>Registrados</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end: Counter Area -->
+
+<!-- start: Text Area -->
+<section class="text-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-header">
+                    <div class="heading-left">
+                        <p class="wow fadeInUp" data-wow-delay=".3s">¿Quiere Iniciar un Proyecto?</p>
+                        <h2 id="anim" class="section-title wow fadeInUp" data-wow-delay=".4s">Escríbame</h2>
+                    </div>
+                    <div class="chat-mail wow fadeInRight" data-wow-delay=".5s">
+                        <a class="link" href="mailto:felipeduenas0@gmail.com">
+                            felipeduenas0@gmail.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end: Text Area -->

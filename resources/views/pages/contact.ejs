@@ -1,0 +1,128 @@
+<!-- BREADCRUMB -->
+<%- include("../components/breadcrumb-area", { title: "Contacto" }) %>
+
+<!-- start: Contact Area -->
+<section class="contact-section" id="contact-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-7 order-2 order-md-1">
+                <div class="contact-form-box wow fadeInLeft" data-wow-delay=".3s">
+                    <div class="section-header mt-3">
+                        <h2 class="section-title">
+                            ¡Trabajemos&nbsp;Juntos!
+                        </h2>
+                        <p class="">
+                            Contácteme y cuénteme sus ideas para que juntos las transformemos en sistemas robustos y
+                            eficientes
+                        </p>
+                    </div>
+                    <div class="tj-contact-form">
+                        <form id="contact-form">
+                            <div class="row gx-3">
+                                <div class="col-sm-6">
+                                    <div class="form_group">
+                                        <label for="name_id"></label>
+                                        <input type="text"
+                                               id="name_id"
+                                               name="name"
+                                               placeholder="Nombre"
+                                               autocomplete="off"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form_group">
+                                        <label for="surname_id"></label>
+                                        <input type="text"
+                                               id="surname_id"
+                                               name="surname"
+                                               placeholder="Apellido"
+                                               autocomplete="off"/>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form_group">
+                                        <label for="email_id"></label>
+                                        <input type="email"
+                                               id="email_id"
+                                               name="email"
+                                               placeholder="Email"
+                                               autocomplete="off"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form_group">
+                                        <label for="number_phone_id"></label>
+                                        <input type="tel"
+                                               id="number_phone_id"
+                                               name="number_phone"
+                                               placeholder="Número"
+                                               autocomplete="off"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form_group">
+                                        <label for="message_id"></label>
+                                        <textarea id="message_id"
+                                                  name="message"
+                                                  placeholder="Escriba su mensaje..."></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form_btn">
+                                        <button type="submit" class="btn tj-btn-primary">Enviar Email</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 offset-lg-1 col-md-5 d-flex flex-wrap align-items-center order-1 order-md-2">
+                <div class="contact-info-list">
+                    <ul class="ul-reset">
+                        <li class="d-flex flex-wrap align-items-center position-relative wow fadeInRight"
+                            data-wow-delay=".4s">
+                            <div class="icon-box">
+                                <i class="flaticon-phone-call"></i>
+                            </div>
+                            <div class="text-box">
+                                <p>Número</p>
+                                <a href="tel:573224838289">
+                                    <%= data.personal.phone %>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="d-flex flex-wrap align-items-center position-relative wow fadeInRight"
+                            data-wow-delay=".5s">
+                            <div class="icon-box">
+                                <i class="flaticon-mail-inbox-app"></i>
+                            </div>
+                            <div class="text-box">
+                                <p>Email</p>
+                                <a href="mailto:felipeduenas0@gmail.com">
+                                    <%= data.personal.email %>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="d-flex flex-wrap align-items-center position-relative wow fadeInRight"
+                            data-wow-delay=".6s">
+                            <div class="icon-box">
+                                <i class="flaticon-location"></i>
+                            </div>
+                            <div class="text-box">
+                                <p>Ubicación</p>
+                                <a href="https://maps.app.goo.gl/GUwir18rH5GXD99t5" target="_blank">
+                                    <%= data.personal.location %>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end: Contact Area -->

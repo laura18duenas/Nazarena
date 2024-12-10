@@ -1,0 +1,6 @@
+# Ignore environment configuration file
+.idea
+.env
+
+node_modules
+.vercel
