@@ -55,7 +55,7 @@ const setForm = (req, res) => {
 
     } catch (error) {
         console.error('Error adding record:', error.message);
-        res.status(500).json({error: "Error al guardar los datos en el archivo Excel."});
+	res.status(500).json({error: error});
     }
 };
 
